@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>can i eat it?</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'BRO';
+      src: url('RubikPuddles-Regular.ttf') format('truetype');
+    }
+
+    h1 {
+        font-family: 'BRO'; 
+        font-size: 200px;
+        color: #ff0000;
+      }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0px;
+      width: 100vw;
+      height: 100vh;
+      margin-bottom: 20px;
+    }
+
+    .model-cell {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 0px;
+      overflow: hidden;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+
+
+    .container_2 {
+      margin-top: 0x;
+      display: flex;
+      gap: 20px;
+    }
+
+    .left {
+      flex: 2; /* Chiếm 50% */
+      background-color: #ff0000;
+      padding: 40px;
+      border-radius: 15px;
+      margin: 20px;
+    }
+
+    .right {
+      flex: 1; /* Chiếm 50% */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px; 
+
+    }
+
+    .right img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .container_3 {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 50px;     
+    height: 80vh;
+    }
+
+
+    .container_4 {
+    display: flex;
+    width: 100vw;      /* Chiếm toàn bộ chiều rộng của màn hình */
+    height: 100vh;     /* Chiếm toàn bộ chiều cao của màn hình */
+    background-color:#010042;
+    }
+
+    .item {
+      flex: 1;           /* Mỗi item sẽ chiếm 1/3 màn hình */
+      display: flex;
+      justify-content: center;  /* Căn giữa nội dung theo chiều ngang */
+      align-items: center;     /* Căn giữa nội dung theo chiều dọc */
+    }
+
+    .image, .video {
+      width: 90%;         /* Mỗi ảnh và video sẽ chiếm toàn bộ chiều rộng của item */
+      height: 90%;        /* Mỗi ảnh và video sẽ chiếm toàn bộ chiều cao của item */
+      object-fit: cover;   /* Đảm bảo hình ảnh và video không bị méo */
+      border-radius: 15px;
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+  <h1 style="text-align: center; margin-top: 50px; margin-bottom: 20px;">CAN I EAT IT?</h1>
+
+  <div class="grid-container">
+    <!-- 16 ô, mỗi ô có một file .glb và màu nền khác nhau -->
+    <!-- Bạn cần thay đổi đường dẫn 'models/model1.glb' theo đúng tên file bạn có -->
+    <!-- Mỗi .model-cell có màu nền khác nhau -->
+
+    <!-- Dưới đây là ví dụ cho 4 mô hình đầu -->
+    <div class="model-cell" style="background-color: #2235ff;">
+      <model-viewer src="models/banhmy.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #010042;">
+      <model-viewer src="models/beer_mug_glass.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #2235ff;">
+      <model-viewer src="models/can.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #010042;">
+      <model-viewer src="models/bubble_tea.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+
+    <!-- Bạn thêm tiếp các mô hình từ model5.glb đến model16.glb ở dưới đây -->
+    <div class="model-cell" style="background-color: #010042;">
+      <model-viewer src="models/chinese_take_out_boxes.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #2235ff;">
+      <model-viewer src="models/cheesecake.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #010042;">
+      <model-viewer src="models/Ice_cream.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #2235ff;">
+      <model-viewer src="models/package_of_yummy_sausages.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+
+    <div class="model-cell" style="background-color: #2235ff;">
+      <model-viewer src="models/Wein_bottle.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #010042;">
+      <model-viewer src="models/cookie_school_project.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #2235ff;">
+      <model-viewer src="models/fried_cake.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+    <div class="model-cell" style="background-color: #010042;">
+      <model-viewer src="models/wein_glass.glb" auto-rotate camera-controls></model-viewer>
+    </div>
+  </div>
+
+  <div class="container_2">
+    <div class="left">
+    <h1 style="font-size: 100px; color: #ffffff;">Eating  on  the  train</h1>  
+      <p style="font-family: Arial, Helvetica, sans-serif; font-size: 25px; color: #ffffff;">"Can I eat it?" 
+      Yes, actually you CAN EAT everything in this world. But then there are some places that vorbidden you from eating. In the railtrain! <br>
+      <br>
+      I've done a lot of research, and as far as I know, there aren't any laws against eating on trains. It's more of a common courtesy thing, 
+      where people understand each other and don't cause any trouble by eating in public. <br>
+      <br>
+      That's exactly why I made this project: "Can i eat it?" to remind people, not to behave too rudely on train. I feel really awkward when 
+      someone on the train is eating something that smells a bit. <br>
+      <br>
+      I scan different kinds of food or collect 3D models in SketchLab, then put them on the floor of the train. I want to make you feel like 
+      you're walking through a party of food, but on a train!<br>
+      </p>
+    </div>
+    <div class="right">
+      <img src="eat_on_train_2.png" style="width: 100%;">
+    </div>
+  </div>
+
+  <!-- <model-viewer id="model-viewer"
+                src="can_i_eat_it.glb"
+                ios-src="can_i_eat_it.usdz"
+                alt="Bahn"
+                ar
+                auto-rotate
+                camera-controls
+                ar-modes="webxr scene-viewer quick-look" 
+                environment-image="neutral">   
+  </model-viewer>
+ <script>
+        async function checkARCoreCompatibility() {
+            const modelViewer = document.getElementById('model-viewer');
+            const isARCoreSupported = await navigator.xr.isSessionSupported('immersive-ar');
+            if (!isARCoreSupported) {
+                modelViewer.removeAttribute('ar');
+                modelViewer.removeAttribute('ar-modes');
+                alert('Your device is not compatible with AR features. You can still view the 3D model.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', checkARCoreCompatibility);
+</script> -->
+
+<div class="container_3">
+  <h1 style="font-size: 100px; color: #ff0000;">Here to the AR model</h1> 
+  <!-- <p style="font-family: Arial, Helvetica, sans-serif; font-size: 25px; color: #ff0000;">
+    Click "view" or "anzeigen" then when the file pops up, press the cube icon at the top right </p> -->
+  <img src="qr-code.png" style="width: 20%;">
+</div>
+
+<div class="container_4">
+  <div class="item">
+    <img src="1.PNG" alt="Image 1" class="image">
+  </div>
+  <div class="item">
+    <video src="2.mp4" autoplay loop muted class="video"></video>
+  </div>
+  <div class="item">
+    <img src="3.PNG" alt="Image 3" class="image">
+  </div>
+</div>
+
+</body>
+</html>
+
